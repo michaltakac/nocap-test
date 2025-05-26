@@ -13,4 +13,9 @@ torchrun --standalone --nproc_per_node=1 train_gpt2.py \
   --learning_rate 0.0018 \
   --warmup_iters 256 \
   --warmdown_iters 1024 \
+  --mixer "afno" \
+  --afno_num_blocks 8 \
+  --afno_sparsity_threshold 0.01 \
+  --afno_hard_thresholding_fraction 1.0 \
+  --afno_hidden_size_factor 1 \
   --log_wandb
